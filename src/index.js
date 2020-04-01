@@ -4,7 +4,7 @@ const crypto = require("crypto");
 const db = require('./database/db');
 
 const app = express();
-const port = process.env.port;
+const port = process.env.PORT;
 app.set('port', port);
 
 // Add headers
