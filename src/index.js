@@ -29,6 +29,16 @@ app.use(function (req, res, next) {
 
 
 const server = http.createServer(app);
+
+app.get('/',async (req, res) => {
+  
+ const name  = "students-match-backend";
+ const version = "1.0.0";
+ const build = "success"
+  return res.json( { name, version, build } ); 
+ 
+ });
+
 app.use(express.json());
 app.post('/user',async (req, res) => {
     console.log(req.body);
